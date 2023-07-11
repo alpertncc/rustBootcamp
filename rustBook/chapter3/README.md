@@ -1,10 +1,12 @@
 # Rust Notes on Rust Book Chapter 3
 
+- Open ***common_consepts/src/main.rs*** file and run the ``` $ cargo run ``` command to see the errors, outputs and code lines.
+
 <details>
 
 <summary>Variables and Mutability</summary>
 
-### 3.1. Variables and Mutability
+## 3.1. Variables and Mutability
 
 - By default, *variables* in Rust are immutable. So that Rust gives you to write your code in a way that takes advantage of the saftey and easy concurrency that Rust offers. 
 
@@ -20,6 +22,24 @@
  let mut x = 5; 
  x = 6; 
  ```
- 
+### Constants 
+
+- *Constants* are also values that are bound to a name and are not allowed to change, but there are a few differences between constants and variables. 
+
+1. You ***ARE NOT*** allowed to use ``` mut ``` keyword with *constants*. Constants are just immutable by default. 
+
+1. You declare constants using the ``` const ``` keyword instead of the ``` let ``` keyword, and the type ***MUST BE*** annotated.
+
+1. Constants can be declared in any scope, including the global scope, which makes them useful for values that may parts of code need to know about.
+
+1. Constants may be set only to a constant expression, not the result of a value that could only be computed at runtime. 
+
+- An example of a constant declaration: 
+
+```rust
+conts THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+```
+
+-Rust's naming convention for constants is to use all uppercase with underscores between words. 
 
 </details>
