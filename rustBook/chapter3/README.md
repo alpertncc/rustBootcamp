@@ -42,4 +42,20 @@ conts THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
 -Rust's naming convention for constants is to use all uppercase with underscores between words. 
 
+## Shadowing
+
+- To see the example of shadowing, look at the *main.rs* file. 
+
+- Shadowing is different from marking a variable as ``` mut ```. By using ```let```, we can perform a few transformation on a value but have the variable be immutable after transformations have been completed.
+
+- The other difference between ```mut ``` and *shadowing* is that because we're effectively creating a new variable when we use the ``` let ``` keyword again, we can change the type of the value but reuse the same name.
+
+</details>
+
+<details>
+
+<summary>Data Types</summary>
+
+## 3.2. Data Types
+
 </details>
