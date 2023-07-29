@@ -154,3 +154,76 @@ fn main() {
 ```
 
 </details>
+
+<details> 
+
+<summary> Functions </summary>
+
+- We define a function in Rust by entering fn followed by a function name and a set of parentheses. The curly brackets tell the compiler where the function body begins and ends.
+
+```rust
+fn main() {
+    println!("Hello, world!");
+
+    another_function(); 
+    // We can call any function we’ve defined by entering its name followed by a set of parentheses.
+}
+
+fn another_function() {
+    println!("Another function.");
+}
+```
+- we defined another_function after the main function in the source code; we could have defined it before as well. Rust doesn’t care where you define your functions, only that they’re defined somewhere in a scope that can be seen by the caller.
+
+## Parameters
+
+- We can define functions to have parameters, which are special variables that are part of a function’s signature.
+
+```rust
+fn main() {
+    another_function(5);
+}
+
+fn another_function(x: i32) {
+    println!("The value of x is: {x}");
+}
+
+// The output is "The value of x is: 5"
+```
+
+- In function signatures, you must declare the type of each parameter. This is a deliberate decision in Rust’s design: requiring type annotations in function definitions means the compiler almost never needs you to use them elsewhere in the code to figure out what type you mean.
+
+- When defining multiple parameters, separate the parameter declarations with commas.
+
+## Statements and Expressions
+
+- ***Statements*** are instructions that perform some action and do not return a value. 
+- ***Expressions*** evaluate to a resultant value.
+
+## Functions and Return Values
+
+- Functions can return values to the code that calls them. We don’t name return values, but we must declare their type after an arrow (***->***).
+
+- You can return early from a function by using the return keyword and specifying a value, but most functions return the last expression implicitly.
+
+```rust
+fn five() -> i32 {
+    5
+}
+
+fn main() {
+    let x = five();
+
+    println!("The value of x is: {x}");
+}
+// The output will be "The value of x is: 5".
+```
+
+</details>
+
+
+<details> 
+
+<summary> Comments </summary>
+
+</details>
