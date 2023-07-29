@@ -221,9 +221,111 @@ fn main() {
 
 </details>
 
-
 <details> 
 
 <summary> Comments </summary>
+
+- In Rust, the idiomatic comment style starts a comment with two slashes, and the comment continues until the end of the line. For comments that extend beyond a single line, you’ll need to include ***//*** on each line
+
+```rust
+fn main() {
+// So we’re doing something complicated here, long enough that we need
+// multiple lines of comments to do it! Whew! Hopefully, this comment will
+// explain what’s going on.
+}
+```
+
+</details>
+
+
+
+<details> 
+
+<summary> Control Flow </summary>
+
+- The ability to run some code depending on whether a condition is true and to run some code repeatedly while a condition is true are basic building blocks in most programming languages. The most common constructs that let you control the flow of execution of Rust code are if expressions and loops.
+
+## If Expressions
+
+- An if expression allows you to branch your code depending on conditions. You provide a condition and then state, “If this condition is met, run this block of code. If the condition is not met, do not run this block of code.”
+
+```rust
+fn main() {
+    let number = 3;
+
+    if number < 5 {
+        println!("condition was true");
+    } else {
+        println!("condition was false");
+    }
+}
+```
+
+### Handling Multiple Conditions with ***else if***
+
+- You can use multiple conditions by combining if and else in an else if expression. For example:
+
+```rust
+fn main() {
+    let number = 6;
+
+    if number % 4 == 0 {
+        println!("number is divisible by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisible by 3");
+    } else if number % 2 == 0 {
+        println!("number is divisible by 2");
+    } else {
+        println!("number is not divisible by 4, 3, or 2");
+    }
+}
+// The output is "number is divisible by 3".
+```
+
+- Using too many else if expressions can clutter your code, so if you have more than one, you might want to refactor your code. 
+
+### Using ***if*** in a ***let*** statement
+
+- Because if is an expression, we can use it on the right side of a let statement to assign the outcome to a variable.
+
+```rust
+fn main() {
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+
+    println!("The value of number is: {number}");
+}
+/// The output is "The value of number is: 5".
+```
+
+## Repetition with Loops
+
+- It’s often useful to execute a block of code more than once. For this task, Rust provides several loops, which will run through the code inside the loop body to the end and then start immediately back at the beginning. 
+
+- Rust provides a way to break out of a loop using code. You can place the ***break*** keyword within the loop to tell the program when to stop executing the loop.
+
+- Rust has three kinds of loops: ***loop***, ***while***, and ***for***. 
+
+1. Repeating Code with ***loop***
+
+- The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop.
+
+```rust
+fn main() {
+    loop {
+        println!("again!");
+    }
+}
+/* The output is;
+again!
+again!
+again!
+again!
+...
+*/
+```
+
+1. Returning Values from Loops
+
 
 </details>
