@@ -327,5 +327,61 @@ again!
 
 1. Returning Values from Loops
 
+- One of the uses of a loop is to retry an operation you know might fail, such as checking whether a thread has completed its job. You might also need to pass the result of that operation out of the loop to the rest of your code.
+- To do this, you can add the value you want returned after the break expression you use to stop the loop; that value will be returned out of the loop so you can use it.
+
+```rust
+fn main() {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {result}");
+}
+```
+
+1. Conditional Loops with ***while***
+
+- A program will often need to evaluate a condition within a loop. 
+
+- While the *condition is true*, the loop runs. 
+- When the *condition ceases to be true*, the program calls break, stopping the loop. 
+
+- It’s possible to implement behavior like this using a combination of loop, if, else, and break; you could try that now in a program, if you’d like. However, this pattern is so common that Rust has a built-in language construct for it, called a ***while loop***.
+
+```rust
+fn main() {
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!");
+}
+```
+## Looping Through a Collection with ***for***
+
+- The safety and conciseness of for loops make them the most commonly used loop construct in Rust.
+
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {element}");
+    }
+}
+```
+
+Using the for loop, you wouldn’t need to remember to change any other code if you changed the number of values in the array.
 
 </details>
