@@ -4,7 +4,7 @@
 
 <details> 
 
-<sumamry> 4.1 What is Ownership? </summary>
+<summary> 4.1 What is Ownership? </summary>
 
 - To see the codes for this part of the Chapter 4, open the ```ownership/src/main.rs``` file. To run the code, run the ```$cargo run``` command in the ***ownership*** folder. 
 
@@ -31,6 +31,7 @@ All programs have to manage the way they use a computer’s memory while running
 - Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there. 
 
 ### Ownership Rules
+
 - First, let’s take a look at the ownership rules. Keep these rules in mind as we work through the examples that illustrate them:
 
 1. Each value in Rust has an owner.
