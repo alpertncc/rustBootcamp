@@ -87,6 +87,17 @@ let s = String::from("hello");
 
 </details>
 
+<details>
 
+<summary> The Slice Type </summary>
+
+- ***Slices*** let you reference a contiguous sequence of elements in a collection rather than the whole collection. A slice is a kind of reference, so it does not have ownership.
+
+- To understand better, you MUST read the [relevant section from the Rust Book](https://doc.rust-lang.org/book/ch04-03-slices.html#the-slice-type). 
+
+- I did not prepare a code file for the slices because while reading the link above, you MUST try the code blocks on your own. This way is better for you to learn slices.
+
+
+</details>
 
 
