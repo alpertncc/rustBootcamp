@@ -4,7 +4,7 @@
 
 <details> 
 
-<summary> 4.1 What is Ownership? </summary>
+<summary> What is Ownership? </summary>
 
 - To see the codes for this part of the Chapter 4, open the ```ownership/src/main.rs``` file. To run the code, run the ```$cargo run``` command in the ***ownership*** folder. 
 
