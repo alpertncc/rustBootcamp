@@ -1,5 +1,7 @@
 # Chapter 4. Understanding Ownership
 
+- Ownership, References and Borrowing are important topics on Rust. We must learn these topics as best we can. So, please follow the instructions and read the notes carefully.
+
 <details> 
 
 <sumamry> 4.1 What is Ownership? </summary>
@@ -66,12 +68,25 @@ let s = String::from("hello");
 1. Ownership and Functions
 1. Return Values and Scope
 
+</details>
+
 <details>
 
 <summary> References and Borrowing </summary>
 
+-  A reference is like a pointer in that it’s an address we can follow to access the data stored at that address; that data is owned by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.
+
+- Note: The opposite of referencing by using `&` is dereferencing, which is accomplished with the dereference operator, `*`.
+
+- When functions have references as parameters instead of the actual values, we won’t need to return the values in order to give back ownership, because we never had ownership.
+
+- We call the action of creating a reference ***borrowing***.
+
+- To undertand better, I suggest you to examine the code blocks in the `chapter4/references_borrowing/src/main.rs` file.
+- Also, please go to the [relevant section of the Rust Book](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#references-and-borrowing) and read the relevant page. 
+
 </details>
 
 
 
-</details>
+
