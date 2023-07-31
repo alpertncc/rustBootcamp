@@ -39,5 +39,39 @@ All programs have to manage the way they use a computer’s memory while running
 
 - A scope is the range within a program for which an item is valid.
 
+### The String Type
+
+We’ve already seen string literals, where a string value is hardcoded into our program. String literals are convenient, but they aren’t suitable for every situation in which we may want to use text. 
+
+- One reason is that they’re immutable. 
+
+- Another is that not every string value can be known when we write our code: for example, what if we want to take user input and store it? 
+
+For these situations, Rust has a second string type, ***String***. This type manages data allocated **on the heap** and as such is able to store an amount of text that is unknown to us at compile time. You can create a String from a string literal using the from function, like so:
+
+```rust
+let s = String::from("hello");
+```
+
+- The ***double colon ::*** operator allows us to namespace this particular from function under the String type rather than using some sort of name like string_from.
+
+### IMPORTANT
+
+- To continue to my notes, please open the `chapter4/ownership/src/main.rs` file and examine the code. I also suggest you to read the notes!
+
+- To understand better, please go to the [relevant section of the Rust Book](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#memory-and-allocation) and read these section;
+1. Memory and Allocation
+1. Variables and Data Interacting with Clone
+1. Stack-Only Data: Copy
+1. Ownership and Functions
+1. Return Values and Scope
+
+<details>
+
+<summary> References and Borrowing </summary>
+
+</details>
+
+
 
 </details>
