@@ -1,4 +1,3 @@
-/*
 
 // A program to calculate the area of a rectangle
 
@@ -63,11 +62,11 @@
 
 }
 
-*/
+
 
 
 // Adding Useful Functionality with `Derived Traits`
-
+{
     #[derive(Debug)] // You MUST add this line to be able to take output of the structs!
     struct rectangle {
         widht: u32,
@@ -98,9 +97,28 @@
 
 
     }
+}
 
+{
+        // dbg! macro 
 
-
+        #[derive(Debug)]
+        struct Rectangle {
+            width: u32,
+            height: u32,
+        }
+        
+        fn main() {
+            let scale = 2;
+            let rect1 = Rectangle {
+                width: dbg!(30 * scale), // You will take an output from this line!
+                height: 50,
+            };
+        
+            dbg!(&rect1); // You will take another output from this line!
+            // We used "&" because we do NOT want `dbg!` to take ownership of "rect1", so we use a reference!
+        }
+}   
 
 
 
