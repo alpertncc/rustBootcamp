@@ -74,7 +74,7 @@
         width: u32,
         height: u32,
     }
-    
+
     impl Rectangle {
         fn square(size: u32) -> Self {
             Self {
@@ -83,10 +83,10 @@
             }
         }
     }
-    
+
     fn main() {
-        let sq = Rectangle::square(3); // To call this associated function, we use the :: syntax with the struct name
+        let sq = Rectangle::square(3); // To call this associated function, we use the "::" syntax with the struct name
         println!("{:?}",sq)
     }    
-    
+
 }
