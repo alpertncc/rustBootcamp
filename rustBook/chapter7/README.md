@@ -102,3 +102,11 @@ fn main() {
 <summary> Paths for Referring to an Item in the Module Tree </summary>
 
 </details>
+
+- The rest of the 3 Chapters, you must read from the boo to undertand better. 
+
+1. 7.3 => [Paths for Referring to an Item in the Module Tree](https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html)
+
+1. 7.4 => [Bringing Paths into Scope with the use Keyword](https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html)
+
+1. 7.5 => [Separating Modules into Different Files](https://doc.rust-lang.org/book/ch07-05-separating-modules-into-different-files.html)
